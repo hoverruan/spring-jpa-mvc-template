@@ -38,7 +38,7 @@ public class JpaConfiguration {
 
     @Bean
     public PlatformTransactionManager transactionManager() {
-        return new JpaTransactionManager( localContainerEntityManagerFactoryBean().getObject() );
+        return new JpaTransactionManager(localContainerEntityManagerFactoryBean().getObject());
     }
 
     @Bean
