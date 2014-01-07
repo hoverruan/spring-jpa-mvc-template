@@ -21,4 +21,8 @@ public class BookService {
     public List<Book> findBooks() {
         return entityManager.createQuery("select o from Book o", Book.class).getResultList();
     }
+
+    public void deleteAllBooks() {
+        entityManager.createQuery("delete from Book").executeUpdate();
+    }
 }
